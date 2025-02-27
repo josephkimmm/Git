@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1 {
+            width: 200px; height: 200px;
+            border: 1px solid black;
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+    <!-- ex04.html -->
+    <h1>jQuery Effect</h1>
+
+    <input type="button" value="버튼1" id="btn1" class="btn">
+    <input type="button" value="버튼2" id="btn2" class="btn">
+    <input type="button" value="버튼3" id="btn3" class="btn">
+
+    <hr>
+
+    <div id="box1">상자</div>
+
+    <p>또 다른 요소</p>
+
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script>
+        
+        //jQuery Effect
+        //1. hide(time), show(time), toggle(time)
+        //2. fadeOut(), fadeIn(), fadeToggle()
+        //3. slideUp(), slideDown(), slideToggle()
+        //4. animate() > 사용자 정의
+
+        let count = 0;
+
+        $('#btn1').click(() => {
+            //$('#box1').hide('slow');
+            //$('#box1').fadeOut();
+            //$('#box1').slideUp();
+
+            //jQuery함수는 매개변수를 객체로 잘 전달한다.
+            // $('#box1').animate({
+            //     // height: '400px',
+            //     // width: '400px'                
+            //     // opacity: 0
+            // });
+
+            //box.style.width = parseInt(box.style.width) + 50 + 'px';
+
+            // $('#box1').animate({
+            //     width: '+=50px',
+            //     height: '+=50'
+            // });
+
+            $('#box1').animate({
+                width: '+=50px'
+            }, 1000, function() {
+                //콜백 함수
+                // alert('애니메이션이 종료될때 하고싶은 일');
+                // $('h1').text('jQuery Effect ' + count);
+                // count++;
+            });
+
+            // count++;
+            // $('h1').text('jQuery Effect ' + count);
+
+            // $('#box1').animate({
+            //     width: '+=100px'
+            // }, 3000, function(){
+            //     $('#box1').animate({
+            //         height: '+=100px'
+            //     }, 3000, function(){
+            //         $('#box1').animate({
+            //             'font-size': '+=3rem'
+            //         });
+            //     });
+            // });
+            //animate를 연속으로 할때 callback함수를 굳이 안써도됨
+
+            //*** jQuery의 대부분의 함수(기능)은 
+            // $('#box1').animate({
+            //     width: '+=100px'
+            // }, 2000);
+
+            // $('#box1').animate({
+            //     height: '+=100px'
+            // }, 2000);
+
+            // $('h1').text('완료');
+
+            // $('#box1').animate({
+            //     width: '+=100px'
+            // }, 2000).animate({
+            //     height: '+=100px'
+            // }, 2000);
+
+            // $('h1').text('완료');
+
+            $('#box1').slideUp()
+                      .slideDown()
+                      .fadeOut()
+                      .fadeIn()
+                      .animate({
+                        'border-width': '20px'
+                      });
+        });
+
+        $('#btn2').click(() => {
+            //$('#box1').show('fast');
+            //$('#box1').fadeIn();
+            //$('#box1').slideDown();
+        });
+
+        $('#btn3').click(() => {
+            //$('#box1').toggle(1000);
+            //$('#box1').fadeToggle();
+            //$('#box1').slideToggle();
+        });
+
+
+
+        //다량의 매개변수를 가진 함수를 생성 시 고려할 점!!
+        function f1(name, age, gender) {
+            console.log('name', name);
+            console.log('age', age);
+            console.log('gender', gender);
+        }
+
+        //f1('홍길동', 20, '남자');
+        //f1('여자', '호호호', 22);
+        //f1('아무개', '남자');
+
+        /*
+        function f2(obj) {
+            console.log('name', obj.name);
+            console.log('age', obj.age);
+            console.log('gender', obj.gender);
+        }
+
+        const hong = {
+            name: '홍길동',
+            age: 20,
+            gender: '남자'
+        };
+
+        f2(hong);
+
+        f2({
+            name: '아무개',
+            age: 22,
+            gender: '남자'
+        });
+
+        f2({
+            age: 25,
+            name: '호호호',
+            gender: '여자'
+        });
+
+        f2({
+            age: 30,
+            gender: '남자'
+        });
+
+        */
+
+    </script>
+</body>
+</html>
