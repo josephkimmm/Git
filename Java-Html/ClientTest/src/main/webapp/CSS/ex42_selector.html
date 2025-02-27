@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/62e01236b6.js" crossorigin="anonymous"></script>
+    <style>
+        /* p > span { color: blue;} */
+        /* p > span::before {
+            content: '홍길동';
+            color: blue;
+        }
+
+        p > span::after {
+            content: '아무개';
+            color: red;
+        } */
+
+        p > span::before {
+            /* content: '🤢'; */
+            font-family: Fontawesome;
+            font-weight: 400;
+            content: '\f09b';
+            margin-right: 2px;
+        }
+
+        /* p > span::before {
+            content: '🤢';
+            font-family: Fontawesome;
+            font-weight: 400;
+            content: '\f09b';
+            margin-right: 2px;
+        } */
+
+        #list1 a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+        }
+
+        #list1 a::before {
+            content: '-';
+        }
+
+        #list2 li::after {
+            content: '원';
+        }
+    </style>
+</head>
+<body>
+    <!-- ex42_selector.html -->
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <span>Modi</span> iste eligendi repellat suscipit necessitatibus nisi cupiditate <span>sapiente</span>, eius animi tempora quam nam omnis, <span>quae</span> voluptates nulla magni laudantium facere? Ipsam.</p>
+
+    <hr>
+
+    <div id="list1">
+        <a href="#!">네이버</a>
+        <a href="#!">다음</a>
+        <a href="#!">구글</a>
+        <a href="#!">인스타</a>
+        <a href="#!">X</a>
+    </div>
+
+    <ul id="list2">
+        <li>2,000</li>
+        <li>3,000</li>
+        <li>4,800</li>
+    </ul>
+
+</body>
+</html>

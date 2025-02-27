@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        CSS 선택자
+        1. 전체 선택자
+        2. 태그 선택자
+        3. 아이디 선택자
+        - 찾으려고 하는 값이 2개 이상인 경우 사용 지양
+        4. 클래스 선택자
+        5. 그룹 선택자
+        6. 자식 선택자, Child Selector
+        7. 자손 선택자, Descendant Selector
+        8. 인접 형제 선택자
+        9. 형제 선택자
+        10. 의사 클래스, Pseudo class
+        */
+
+        /* div + p { color: blue;} */
+        /* p + p { color: blue;} */
+
+        /* div ~ p { color: blue;} */
+
+        b ~ div { color: blue;}
+
+    </style>
+</head>
+<body>
+    <!-- ex07_selector.html -->
+     <p>P 태그입니다.</p>
+     <div>DIV 태그입니다.</div>
+     <p>P 태그입니다.</p>
+     <p>P 태그입니다.</p>
+     <b>링크입니다.</b>
+     <p>P 태그입니다.</p>
+     <span>Span 태그입니다.</span>
+     <div>DIV 태그입니다.</div>
+     <p>P 태그입니다.</p>
+</body>
+</html>

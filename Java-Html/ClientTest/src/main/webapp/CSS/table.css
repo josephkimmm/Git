@@ -1,0 +1,16 @@
+/* table.css */
+
+.table {
+    border: 1px solid #555555;/*RGB에서 중복되는 숫자는 2개를 1개로 줄일수 있다.#555555 > #555*/
+    border-collapse: collapse;
+}
+
+
+.table th, .table td {
+    border: 1px solid #555;
+    padding: 5px 15px;
+}
+
+.table th {
+    background-color: #EEE;
+}

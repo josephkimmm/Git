@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- ex46_arrow.html -->
+
+    <input type="button" value="버튼1" id="btn1">
+    <input type="button" value="버튼2" id="btn2">
+
+    <script>
+
+    const f4 = () => {
+        console.log('f4');
+    };
+
+    f4();
+    console.clear();
+
+    //구현부 1줄 >  실행 블럭 생략
+    const f5 = () => console.log('f5');
+
+    //매개변수
+    const f6 = () => console.log('f6');
+    const f7 = (num) => console.log(num);
+    const f8 = num => console.log(num);
+    const f9 = (a, b) => console.log(a, b);
+
+    //반환값
+    const f10 = () => { return 100; };
+    const f11 = () => 100;
+
+    document.getElementById('btn1').onclick = function() {
+        alert(event.target.id);
+    }
+
+    document.getElementById('btn2').onclick 
+        = () => alert(event.target.id);
+
+
+    // setTimeout(function() {
+    //     alert();
+    // }, 1000);
+
+    // setTimeout(() => alert(), 1000); //콜백 함수
+
+    document.getElementById('btn1').onclick = function() {
+        //이벤트 발생 객체?
+        // alert(event.target.value);표준
+        // alert(event.srcElement.value);//비표준
+        alert(this.value); //event.target = this
+    };
+
+    document.getElementById('btn2').onclick = () => {
+        // alert(event.target.value);
+        // alert(event.srcElement.value);
+        // alert(this.value);
+        // alert(this);//window
+    };
+
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: gold;
+        }
+        /* @media 장치 and 조건 and 조건 {
+            CSS 선언부 영역
+            선택자 { 속성: 값;}
+        } */
+        /* @media screen and (max-width: 800px) {
+            body {
+                background-color: cornflowerblue;
+            }
+        } */
+
+        #list {
+            width: 780px;
+        }
+        @media screen and (max-width: 800px) {
+            body {
+                background-color: cornflowerblue;
+            }
+        }
+        #list > div {
+            background-color: tomato;
+            width: 135px;
+            float: none;
+            margin: 10px;
+        }
+        /* 1024보다 작을때 */
+        @media screen and (max-width: 1024px) {
+            body {
+                background-color: cornflowerblue;
+            }
+        }
+        @media screen and (max-width: 640px) {
+            body {
+                background-color: tomato;
+            }
+        }   
+
+    </style>
+</head>
+<body>
+    <!-- ex63_media.html -->
+    <div id="list">
+        <div>강아지</div>
+        <div>고양이</div>
+        <div>병아리</div>
+        <div>송아지</div>
+        <div>호랑이</div>
+    </div>
+
+</body>
+</html>

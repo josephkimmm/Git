@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #list {
+            width: 645px;
+            margin: 0 auto;
+            /* outline: 1px solid black; */
+        }
+
+        #list .item {
+            width: 584px;
+            /* outline: 1px solid blue; */
+            margin: 15px auto;
+            border-bottom: 1px solid #CCC;
+            padding-bottom: 15px;
+        }
+        #list .item::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        #list .item img {
+            float: left;
+            width: 110px;
+            height: 75px;
+            margin-right: 5px;
+        }
+        #list .item .txt {
+            float: left;
+            width: 470px;
+        }
+        #list .item .txt .title {
+            font-size: 15px;
+            color: #1E1E23;
+            letter-spacing: -1px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        #list .item .txt .content {
+            font-size: 13px;
+            color: #767678;
+            letter-spacing: -0.5px;
+            margin-bottom: 4px;
+            
+            width: 470px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        #list .item .txt .info {
+            
+        }
+        #list .item .txt .info span:nth-child(1) {
+            font-size: 12px;
+            color: #929298;
+        }
+        #list .item .txt .info span:nth-child(2) {
+            font-size: 12px;
+            color: #3F6CDB;
+        }
+    </style>
+</head>
+<body>
+    <!-- ex50_naver.html -->
+    <div id="list">
+        <div class="item">
+            <img src="images/news01.jpg">
+            <div class="txt">
+                <div class="title">中 TV 수량 기준 첫 30% 넘어…삼성전자·LG전자 “프리미엄으로 차별화”</div>
+                <div class="content">삼성전자와 LG전자가 각각 19년 연속 글로벌 TV 1위, 12년 연속 올레드(OLED) TV 1위 타12년 연속 올레드(OLED) TV 1위 타12년 연속 올레드(OLED) TV 1위 타</div>
+                <div class="info">
+                    <span>전자신문</span>
+                    <span>1시간전</span>
+                </div>
+            </div>            
+        </div>
+        <div class="item">
+            <img src="images/news02.jpg">
+            <div class="txt">
+                <div class="title">머스크, '그록 3'로 오픈AI 독주에 제동…“AI 챗봇 중 최고 성능” 강조</div>
+                <div class="content">일론 머스크 테슬라 최고경영자(CEO)가 자신의 인공지능(AI) 기업 xAI를일론 머스크 테슬라일론 머스크 테슬라 통해 최신 AI 모</div>
+                <div class="info">
+                    <span>전자신문</span>
+                    <span>1시간전</span>
+                </div>
+            </div>            
+        </div>
+        <div class="item">
+            <img src="images/news03.jpg">
+            <div class="txt">
+                <div class="title">주요국, AI '속도전' 속…"韓 고영향 AI 규제 신중해야”</div>
+                <div class="content">미국, 중국, 유럽연합(EU) 등 주요 국가들이 인간 수준의 지능을 가진 범용인공지능(AGI) 확보</div>
+                <div class="info">
+                    <span>이데일리</span>
+                    <span>1시간전</span>
+                </div>
+            </div>            
+        </div>
+        <div class="item">
+            <img src="images/news04.jpg">
+            <div class="txt">
+                <div class="title">판사가 화교? 도 넘는 중국 음모론 "혐오 표현으로 규제해야"</div>
+                <div class="content">'부정선거 음모론'부터 '탄핵 배후엔 중국 공산당' 주장까지. 윤석열 대통령 내란 이후 양극화된 정</div>
+                <div class="info">
+                    <span>미디어오늘</span>
+                    <span>1시간전</span>
+                </div>
+            </div>            
+        </div>
+        <div class="item">
+            <img src="images/news05.jpg">
+            <div class="txt">
+                <div class="title">美, 20년 만에 非마약성진통제 승인…SK 등 후발주자 '청신호'</div>
+                <div class="content">미국 식품의약국(FDA)이 새로운 비마약성진통제를 약 20년만에 승인하면서 시장에 대한</div>
+                <div class="info">
+                    <span>한국경제</span>
+                    <span>1시간전</span>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+</body>
+</html>

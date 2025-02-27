@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        CSS 선택자
+        1. 전체 선택자
+        2. 태그 선택자
+        3. 아이디 선택자
+        - 찾으려고 하는 값이 2개 이상인 경우 사용 지양
+        4. 클래스 선택자
+        5. 그룹 선택자
+
+        6. 자식 선택자, Child Selector
+
+        7. 자손 선택자, Descendant Selector
+        */
+
+        /* b { color: red; } */
+        /* .primary { color: blue;} */
+        /* li > b { color: orange; } */
+
+        /* ul > li > b { color: green;} */
+
+        ul b { color: green;}
+
+    </style>
+</head>
+<body>
+    <!-- ex05_selector.html -->
+     <h1>오늘의 할일</h1>
+
+     <ol>
+        <li>저녁에 <b id="b1" class="primary">과제</b> 작성하기</li>
+        <li>강아지 밥주기</li>
+        <li><b id="b2" class="primary">책상</b> 청소하기기</li>
+     </ol>
+
+     <ul>
+        <li>저녁에 <b>과제</b> 작성하기</li>
+        <li>강아지 밥주기</li>
+        <li><b>책상</b> 청소하기기</li>
+     </ul>
+
+     <p>안녕하세요. 저는 <b>홍길동</b>입니다.</p>
+     
+</body>
+</html>

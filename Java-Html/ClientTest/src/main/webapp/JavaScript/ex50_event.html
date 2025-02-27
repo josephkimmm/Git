@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tbl1 {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        #tbl1 td {
+            border: 1px solid black;
+            width: 126px;
+            height: 126px;
+            font-size: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- ex50_event.html -->
+    <h1>테이블</h1>
+
+    <table id="tbl1">
+        <tr>
+            <td><img src="images/rect_icon01.png"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <input type="text" id="txt1">
+
+    <hr>
+
+    <input type="button" value="버튼1" id="btn1">
+    
+    <hr>
+
+    <a href="https://naver.com" id="link1">네이버</a>
+
+    <br><br><br>
+
+    <script>
+
+        document.querySelectorAll('#tbl1 td').forEach(td => {
+
+            td.onmousedown = function() {
+
+                let fileName = '';
+                if (event.buttons == 1) {
+                    fileName = 'images/rect_icon01.png'
+                } else if(event.buttons == 2) {
+                    fileName = 'images/rect_icon02.png'
+                } else if(event.buttons == 4) {
+                    //태그삭제
+                    // - 부모태그.removeChild(자식태그)
+                    // alert(event.target);
+                    // alert(event.target.parentElement.nodeName);//TD
+                    // alert(event.currentTarget.nodeName);//TD
+
+                    event.currentTarget.removeChild(event.target);
+
+                }
+                if (event.buttons != 4) {
+                    const img = document.createElement('img');
+                    img.setAttribute('src', fileName);
+                    event.target.appendChild(img);
+                }
+            };
+        });
+
+        window.oncontextmenu = function() {
+            return false;
+        }
+
+
+        document.getElementById('txt1').onkeydown = function() {
+            //keydown 발생 > 문자 입력 > keyup 발생
+
+            // return false; //비표준// 현재 일어난 사건을 없었던 일로 처리
+            event.preventDefault();
+        };
+
+        
+        document.getElementById('btn1').onclick = function() {
+            
+        };
+        document.getElementById('link1').onclick = function() {
+            return false;
+        };
+    </script>
+</body>
+</html>

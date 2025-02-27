@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 50px;
+        }
+        #box1 { border: 1px solid black; width: 200px; height: 200px; }
+
+        .one { font-size: 5rem; }
+        .two { color: orange; }
+        .three { text-decoration: underline; }
+
+    </style>
+</head>
+<body>
+    <!-- ex51_css.html -->
+    <h1>CSS</h1>
+
+    <input type="button" value="버튼1" id="btn1">
+    <input type="button" value="버튼2" id="btn2">
+    <hr>
+    <div id="box1">상자</div>
+
+    <h1>News</h1>
+
+    <div class="tool">
+        <button type="button" id="btn3">➕</button>
+        <button type="button" id="btn4">➖</button>
+    </div>
+
+    <p id="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates odio tempore necessitatibus voluptatem odit earum assumenda quisquam, harum ipsa temporibus placeat sit beatae nemo repellendus quasi asperiores totam repudiandae quis rem molestiae perspiciatis soluta porro quo. A at, impedit nam laborum corrupti facilis velit quod dignissimos suscipit neque, corporis unde consequuntur exercitationem, accusantium placeat nobis doloremque nulla nemo amet. Similique quas aperiam voluptates ipsum magni atque enim itaque ullam deserunt quasi assumenda, adipisci est exercitationem alias, reiciendis voluptate. Distinctio quaerat, tenetur nulla cupiditate id aspernatur illum assumenda obcaecati ab blanditiis neque facere labore, fuga odio minus eveniet consequatur ut, voluptate libero! Deserunt corporis saepe tempora expedita dolorem quis eos, cum impedit, eveniet ut ipsam sequi laboriosam repellendus non quasi atque facilis porro. Quis, sit placeat laboriosam ipsam quisquam ut optio repudiandae ullam, at qui tenetur officia accusamus, nam asperiores similique minima accusantium explicabo impedit quas hic ipsa autem dignissimos. Officia blanditiis nihil necessitatibus illum, obcaecati labore, libero hic explicabo accusantium facere ab alias in! Officia, doloremque id. Ut deleniti harum saepe, nostrum quos consectetur minima inventore porro hic debitis mollitia laboriosam ipsa eius quis dignissimos nemo unde expedita quibusdam ratione veniam iure sint explicabo. Numquam maiores blanditiis possimus ut unde!</p>
+
+    <script>
+
+        const box1 = document.getElementById('box1');
+
+        document.getElementById('btn1').onclick = function() {
+            
+            /* 
+                JavaScript > CSS 조작
+                1. 모든 태그 > style 속성 제공
+                    - 자바스크립트 > style 프로퍼티 제공
+                    - CSS 속성명 > 동명의 프로퍼티로 제공
+                        - 대부분 동일한 이름으로 제공
+                        - 케밥 표기법(-) > 캐멀 표기법으로 변경
+                    - CSS 속성값
+                        - 대부분 문자열로 작성
+                2. class 조작
+            */
+
+            //<div id="box1">상자</div>
+            //<div id="box1" style='color:blue;'>상자</div>
+            //box1.style = 'color: blue;';
+            //box1.style = 'color: blue; font-size: 3rem;';
+
+            //box1.style.color = 'blue';
+            //box1.style.fontSize = '3rem';
+            //box1.style['font-size'] = '3rem';
+
+            //<div class="one two">
+            //box1.className = 'one two'; //DOM
+            //box1.classList.add('one');
+            //box1.classList.add('two');
+
+
+            //현재 상자의 너비?
+            //- 자바스크립트로  CSS를 조작 == 태그의 style 프로퍼티 조작
+            // > 인라인 스타일로 정의된 CSS 속성만 접근 가능하다.
+
+            //box1.style.width = '400px';
+            //alert(box1.style.width); //200px
+
+            //버튼 클릭 > 상자의 너비 + 50px
+            //                 200px            + 50 > 200px50
+            //                 200              + 50 > 250
+            //box1.style.width = parseInt(box1.style.width) + 50 + 'px';
+
+            //const list = window.getComputedStyle(box1);
+            
+            //console.log(list);//CSSStyleDeclaration
+            //console.log(list.width); //200px
+            //console.log(list.getPropertyValue('width')); //200px
+            //console.log(list.getPropertyValue('border'));
+            //console.log(window.getComputedStyle(document.body).getPropertyValue('margin'));
+
+            box1.style.width = parseInt(window.getComputedStyle(box1).getPropertyValue('width')) + 50 + 'px';
+
+        };
+
+        document.getElementById('btn2').onclick = function() {
+            //<div id="box1" style='background-color: yellow;'>상자</div>
+            //box1.style = 'background-color: yellow;';
+            //box1.style.backgroundColor = 'yellow';
+
+            //<div class="one two three">
+            //box1.className = 'one two three';
+            //box1.classList.add('three');
+            //box1.classList.remove('two');
+        };
+
+
+        //console.log(window);
+
+        //비권장
+        // btn2.onclick = function() {
+        //     alert();
+        // };
+
+
+        let size = 16;
+
+        document.getElementById('btn3').onclick = function() {
+            size++;
+            if (size > 30) size = 30;
+            document.getElementById('content').style.fontSize = size + 'px';
+        };
+
+        document.getElementById('btn4').onclick = function() {
+            size--;
+            if (size < 9) size = 9;
+            document.getElementById('content').style.fontSize = size + 'px';
+        };
+
+    </script>
+    
+</body>
+</html>

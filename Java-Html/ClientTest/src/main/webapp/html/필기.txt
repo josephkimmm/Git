@@ -1,0 +1,137 @@
+아파치 톰갯
+-네트워크 프로그램 > 포트 번호 사용 > 8080 사용
+
+사용할 브라우저
+- 크롬 브라우저
+
+수업 환경
+1. 이클립스 + 아파치 톰캣
+2. 크롬 브라우저
+
+Client Programming, Front-end Programming
+1. HTML
+2. CSS
+3. JavaScript
+
+
+
+Server Programming, Back-end Programming
+1. Servlet > Java
+2. JSP > Java
+3. Spring > Java
+4. Spring Boot > Java
+
+
+web?
+- www > world wide web
+
+Network
+- 2대 이상의 컴퓨터를 서로 연결해놓은 환경
+- 통신 가능한 환경
+- 관리하는 주체가 있음
+
+Internet
+- inter-network
+- 전세계의 모든 컴퓨터를 서로 연결해놓은 환경
+- 관리하는 주체가 없음
+
+Web
+- 인터넷 기반
+- 서로간의 정보(문서)를 주고 받는 환경
+
+우리의 목적
+- web 기반의 서비스(CS) 구현 > 웹 사이트 구현
+
+Web Service
+- 웹 클라이언트 <- (정보) -> 웹 서버
+- 웹 서버 : 문서를 제공 > 아파치 톰캣
+- 웹 클라이언트 : 문서를 요청 + 제공 받음(소비) > 크롬 브라우저
+
+URI
+- Uniform Resource Identifier
+- 웹이서 특정 자원을 구분할 수 있는 식별자
+
+
+URL
+- Uniform Resource Locator
+- 웹에서 특정 자원의 위치를 나타내는 주소(식별자) > 인터넷 주소
+- 특정 자원(웹문서, 이미지, 동영상, 파일 등..)
+
+http://www.naver.com:80/member/list.html?name=hong&age=20 > URL(URI)
+
+1. http:
+	- 프로토콜(Protocol) > 통신 규약
+	- 서로간의 데이터를 주고 받을 때 사용하는 규칙
+	- HyperText(HTML) Transfer Protocol
+	- http: 
+	- https: http + 보안(security) 
+	
+2. (www.)naver.com
+	- Domain Address
+	- 도메인 주소
+	- 서버 컴퓨터(호스트, Host)의 주소
+	- IP Address 사용
+
+2.1 IP
+	- 인터넷에서 호스트를 구분하는 고유 주소값(전세계에서 유일한 값)
+	- XXX.XXX.XXX.XXX > IPv4(4,294,967,296) > IPv6
+	- http://223.150.200.256
+
+2.2 DNS
+	- Domain Name Service
+	- DNS Server
+	- http://naver.com > (변환) > http://223.150.200.256
+
+2.3 :80
+	- 포트 번호
+	- http://naver.com:80/ > 웹사이트
+
+3. /member
+	- 자원의 경로(폴더)
+
+4. /list.html
+	- 자원명 (파일명)
+
+5. name=hong&age=20
+	- Query String
+	- 해당 페이지에게 전달하는 데이터(클라이언트가 서버에게 전달하는 데이터)
+	- key=value&key=value&key=value
+	
+HTML, Hyper Text Markup Language
+- 하이퍼 텍스트 마크업 언어
+- Hyper Text > 링크(Link)
+- Markup Language > 태그(Tag)를 사용해서 문법을 표기하는 언어
+	- SGML, XML, HTML, XHTML 등...
+	- 프로그래밍 언어(X) > 표현 언어(O) : 브라우저 화면에 무언가(텍스트, 이미지, 동영상)를 출력하는 기능만 있는 언어
+	- http://w3.org, http://w3c.org > World Wide Web Consortium
+	- HTML 1.0 ~ HTML5
+	- 수업 : HTML 4.01 + XHTML 1.0 + HTML5
+	
+HTML 4.01 > 현재의 웹을 구축
+XHTML 1.0 > XML + HTML
+HTML5 > HTML5 + CSS3 + JavaScript(ES6)
+
+HTML 1.0 > W3C > 50가지
+- 1993년
+- 브라우저 > 소프트웨어 회사
+	1. 모자익
+	2. 넷스케이프 네비게이터 > 50가지 지원 + 추가 기능
+	3. 마이크로소프트> 인터넷 익스플로러 > 50가지 지원 + 추가 기능
+	- HTML 4.01
+
+
+현재 상황
+- 많이 안정화(웹표준화)
+a. HTML > 상
+b. CSS > 상중
+c. JavaScript > 중
+
+
+
+HTML5(HTML 4.01 + XHTML 1.0)
+
+
+
+
+
+

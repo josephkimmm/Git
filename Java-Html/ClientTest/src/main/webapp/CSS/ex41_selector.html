@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #list input[type=text] {
+            display: block;
+            margin-bottom: 5px;
+            outline: none;
+            background-color: white;
+            border: 1px solid #767676;
+            padding: 4px;
+            color: #333;
+        }
+
+        /* #list input[required] {
+            background-color: gold;
+        } */
+
+        /* #list input:required {
+            background-color: gold;
+        }
+
+        #list input:optional {
+            background-color: #999;
+        } */
+
+        /* #list input:disabled {
+            background-color: gold;
+        }
+
+        #list input:enabled {
+            background-color: #999;
+        } */
+
+        /* #list input:read-only {
+            background-color: gold;
+        }
+        #list input:read-write {
+            background-color: #999;
+        } */
+
+        /* #list input:read-only {
+            background-color: #eee;
+            cursor: not-allowed;
+        } */
+
+        #list2 > input[type=checkbox] {
+            /* background-color: aqua;
+            border: 10px solid black; */
+            opacity: 0.3;
+            width: 20px;
+            height: 20px;
+            transition: all 0.3s ease;
+        }
+
+        #list2 > input[type=checkbox]:checked {
+            opacity: 1;
+            width: 30px;
+            height: 30px;
+        }
+        label {
+            user-select: none;
+        }
+        #cb1:checked + div {
+            display: none;
+        }
+
+        #box {
+            border: 1px solid black;
+            width: 200px;
+        }
+
+        #box #cb2 {
+            display: none;
+        }
+        #box label {
+            font-size: 1.5rem;
+            font-family: Arial;
+            font-variant: small-caps;
+            display: block;
+            padding: 10px;
+            background-color: dodgerblue;
+            color: white;
+            cursor: pointer;
+        }
+
+        #box div {
+            padding: 10px;
+            border-top: 1px solid black;
+            display: none;
+        }
+
+        #box #cb2:checked + label + div {
+            display: block;
+        }
+
+        #box #cb2:checked + label {
+            background-color: tomato;
+        }
+
+        #cb1 {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- ex41_selector.html -->
+    <h1>Form</h1>
+    <div id="box">
+        <label for="cb2">JavaScript
+            <input type="checkbox" id="cb2">
+        </label>
+        <div> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi voluptates rem cum facilis est illum laudantium, accusamus repudiandae iure laborum harum, ab adipisci quis, cupiditate autem error optio velit perferendis!</div>
+    </div>
+    <label for="cb1">설명 감추기</label>
+        <input type="checkbox" id="cb1">
+
+        <div> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt explicabo soluta consequatur veniam ab. Incidunt tenetur tempore eligendi, sed sapiente magnam molestias non amet esse itaque iusto, possimus enim saepe.</div>
+    <div id="list2">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+    </div>
+    <hr>
+    <div id="list">
+        <input type="text" value="1" required>
+        <input type="text" value="2" readonly>
+        <input type="text" value="3" readonly>
+        <input type="text" value="4">
+        <input type="text" value="5" required>
+        <input type="text" value="6" disabled>
+        <input type="text" value="7">
+        <input type="text" value="8">
+        <input type="text" value="9" disabled>
+        <input type="text" value="10" required>
+    </div>
+</body>
+</html>
